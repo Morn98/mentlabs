@@ -1,4 +1,4 @@
-# Portfolio - Personal Landing Page
+# Mentlabs - Personal Landing Page
 
 A modern, responsive portfolio website built with React showcasing software development and security engineering expertise.
 

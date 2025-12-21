@@ -3,61 +3,86 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Security Engineer',
-      company: 'Tech Corp Inc.',
-      period: '2022 - Present',
+      title: 'Security Architecture Trainee',
+      company: 'Liechtensteinische Landesbank AG',
+      period: 'Sep 2025 - Dec 2025',
       type: 'professional',
       responsibilities: [
-        'Lead security architecture design for enterprise applications',
-        'Implement DevSecOps pipelines and automated security testing',
-        'Conduct security audits and vulnerability assessments',
-        'Mentor junior developers on secure coding practices',
+        'Todo!'
       ],
     },
     {
-      title: 'Software Developer & Security Analyst',
-      company: 'SecureTech Solutions',
-      period: '2020 - 2022',
+      title: 'Network & Security Trainee',
+      company: 'Liechtensteinische Landesbank AG',
+      period: 'Sep 2024 - Aug 2025',
       type: 'professional',
       responsibilities: [
-        'Developed secure web applications using React and Java',
-        'Implemented security monitoring and incident detection systems',
-        'Performed penetration testing and security assessments',
-        'Collaborated with cross-functional teams on security initiatives',
+        'Analysis, handling and remediation of security incidents', 
+        'Development of a container security policy', 
+        'Implementation and automation of threat intelligence', 
+        'Automation of various standard processes using Ansible and Python', 
+        'Design and deployment of a new remote access client', 
+        'Contribution to a company-wide Zero Trust Network Access initiative', 
+        'Maintenance, standardization and further development of the firewall and proxy infrastructure', 
+        'Participation in a "Young Talents" initiative to improve the online banking presence'
       ],
     },
     {
-      title: 'Junior Software Developer',
-      company: 'StartUp Innovations',
-      period: '2018 - 2020',
+      title: 'Master Thesis Student',
+      company: 'ACTICO GmbH',
+      period: 'Oct 2023 - Apr 2024',
+      type: 'professional', 
+      responsibilities: [
+        'Creating a concept for a zero trust architecture in container-based microservice application'
+      ]
+    },
+    {
+      title: 'Software Development Working Student',
+      company: 'ACTICO GmbH',
+      period: 'Jun 2022 - Sep 2023',
       type: 'professional',
       responsibilities: [
-        'Built responsive frontend applications with modern frameworks',
-        'Integrated security best practices into SDLC',
-        'Participated in code reviews and security training',
-        'Contributed to API development and documentation',
+        'Independent implementation of features and bug fixes in Java and Angular', 
+        'Designing databases structures and migrating existing data',
+        'Supporting the testing process, including executing performance tests and implementing automated tests', 
+        'Active participation in the agile Scrum process', 
+        'Creating user and developer documentation'
+      ],
+    },
+    {
+      title: 'IT Security Analyst Internship',
+      company: 'MOGWAI Labs GmbH',
+      period: 'May 2021 - Oct 2021',
+      type: 'professional',
+      responsibilities: [
+        'Vulnerability analysis of web applications',
+        'Development of scripts and tools to exploit vulnerabilities (Java, Python, .NET)',
+        'OCR recognition', 
+        'Penetration testing', 
+        'Cloud software development', 
+        'Android app reversing'
       ],
     },
     {
       title: 'M.Sc. Computer Science',
-      company: 'Technical University',
-      period: '2016 - 2018',
+      company: 'University of Applied Sciences Weingarten',
+      period: '2022 - 2024',
       type: 'education',
       responsibilities: [
-        'Specialized in IT Security and Cryptography',
-        'Thesis: "Secure Software Development Practices in Agile Environments"',
-        'GPA: 1.5 (German grading system)',
+        'Specialization in IT Security',
+        'Masters Thesis: An Approach for Zero Trust in Container-Based Microservice Applications',
+        'GPA: 1.8'
       ],
     },
     {
       title: 'B.Sc. Computer Science',
-      company: 'Technical University',
-      period: '2013 - 2016',
+      company: 'University of Applied Sciences Ulm',
+      period: '2018 - 2022',
       type: 'education',
       responsibilities: [
-        'Focus on Software Engineering and Systems Security',
-        'Relevant coursework: Network Security, Software Architecture, Database Systems',
-        'Dean\'s List for Academic Excellence',
+        'Focus on IT Security and Business Administration',
+        'Bachelor Thesis: Establishment of a certifiable emergency management system at THU',
+        'GPA: 1.8 '
       ],
     },
   ];
