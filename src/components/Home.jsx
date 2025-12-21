@@ -24,12 +24,15 @@ const Home = () => {
           <div className="home-text">
             <h1 className="home-title">
               Software Developer &<br />
-              Security Analyst / Engineer
+              Security Engineer
             </h1>
             <p className="home-description">
               Specialized in secure software development, robust architecture design,
-              and DevSecOps practices. Building reliable, security-focused solutions
-              that protect what matters most.
+              security engineering and incident response. Building reliable,
+              security-focused solutions that protect what matters most.
+            </p>
+            <p className="home-quote">
+              <em>"I like to build, test, and break stuff - curiosity drives the process. 🧑‍💻📚"</em>
             </p>
             <div className="home-cta">
               <button

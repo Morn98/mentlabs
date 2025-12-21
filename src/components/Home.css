@@ -69,9 +69,20 @@
 .home-description {
   font-size: 1.25rem;
   color: #cbd5e1;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.7;
   max-width: 600px;
+}
+
+.home-quote {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  font-style: italic;
+  padding-left: 1rem;
+  border-left: 3px solid #60a5fa;
 }
 
 .home-cta {
@@ -140,6 +151,12 @@
     margin-right: auto;
   }
 
+  .home-quote {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .home-cta {
     justify-content: center;
     flex-direction: column;
@@ -164,5 +181,9 @@
 
   .home-description {
     font-size: 1rem;
+  }
+
+  .home-quote {
+    font-size: 0.95rem;
   }
 }

@@ -45,7 +45,7 @@ const Navigation = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-brand">Portfolio</div>
+        <div className="nav-brand">Moritz Nentwig</div>
         <ul className="nav-menu">
           {navItems.map((item) => (
             <li key={item.id} className="nav-item">
