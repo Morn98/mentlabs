@@ -39,9 +39,9 @@ const Projects = () => {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <h2 className="section-title">Personal Projects</h2>
+        <h2 className="section-title">Side Projects</h2>
         <p className="section-subtitle">
-          A selection of security-focused tools and applications built to solve real-world problems
+          A selection of applications and security-focused tools built to solve real-world problems
         </p>
 
         <div className="projects-timeline">
