@@ -1,11 +1,12 @@
 import './Contact.css';
+import { SiTryhackme } from 'react-icons/si';
 
 const Contact = () => {
   const contactMethods = [
     {
       name: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'm.nentwig98@web.de',
+      href: 'mailto:m.nentwig98@web.de',
       icon: (
         <svg
           width="24"
@@ -24,8 +25,8 @@ const Contact = () => {
     },
     {
       name: 'GitHub',
-      value: 'github.com/yourusername',
-      href: 'https://github.com/yourusername',
+      value: 'github.com/Morn98',
+      href: 'https://github.com/Morn98',
       icon: (
         <svg
           width="24"
@@ -43,8 +44,8 @@ const Contact = () => {
     },
     {
       name: 'LinkedIn',
-      value: 'linkedin.com/in/yourprofile',
-      href: 'https://linkedin.com/in/yourprofile',
+      value: 'linkedin.com/in/moritz-nentwig',
+      href: 'https://linkedin.com/in/moritz-nentwig',
       icon: (
         <svg
           width="24"
@@ -61,6 +62,12 @@ const Contact = () => {
           <circle cx="4" cy="4" r="2" />
         </svg>
       ),
+    },
+    {
+      name: 'TryHackMe',
+      value: 'tryhackme.com/p/Ment',
+      href: 'https://tryhackme.com/p/Ment',
+      icon: <SiTryhackme size={24} />,
     },
   ];
 
