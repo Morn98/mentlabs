@@ -79,6 +79,10 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .certification-card::before {
@@ -149,6 +153,32 @@
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
+  margin-bottom: 1rem;
+}
+
+.cert-link-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #60a5fa;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cert-link-indicator svg {
+  transition: transform 0.3s ease;
+}
+
+.certification-card:hover .cert-link-indicator {
+  color: #3b82f6;
+}
+
+.certification-card:hover .cert-link-indicator svg {
+  transform: translate(2px, -2px);
 }
 
 @media (max-width: 768px) {
