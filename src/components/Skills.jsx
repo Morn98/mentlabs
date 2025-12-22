@@ -3,28 +3,21 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend Development',
-      skills: ['React', 'Angular', 'JavaScript/TypeScript', 'HTML/CSS', 'Responsive Design'],
+      title: 'Development', 
+      skills: ['Java', 'Python', 'Typescript', 'SQL', 'Angular & React', 'Docker/Kubernetes & Microservices', 'CI/CD', 'Vibe Coding'], 
     },
     {
-      title: 'Backend & Languages',
-      skills: ['Java', 'Node.js', 'RESTful APIs', 'Microservices'],
-    },
-    {
-      title: 'DevOps & Infrastructure',
-      skills: ['CI/CD Pipelines', 'Docker', 'Kubernetes', 'Cloud Platforms', 'Infrastructure as Code'],
+      title: 'Enterprise Architecture',
+      skills: ['System Design & Integration',  'Security Architecture', 'Zero Trust Architecture', 'Defense in Depth', 'Data Protection Strategies', 'DORA Compliance', 'Enterprise Architecture Management']
     },
     {
       title: 'Security Engineering',
-      skills: [
-        'Secure Software Development',
-        'SecOps',
-        'Vulnerability Management',
-        'Secure Architecture',
-        'Security Monitoring & Incident Detection',
-        'Secure Application and System Design',
-      ],
+      skills: ['Secure Software Development', 'OWASP Top 10', 'Cryptography and Encryption', 'Application Security, API Security', 'Identity & Access Management (IAM)', 'Vulnerability Assessment & Penetration Testing']
     },
+    {
+      title: 'Security Operations', 
+      skills: ['Incident Response', 'Endpoint Detection & Response', ' Threat Intelligence', 'Firewall & Network Security', 'Vulnerability Scanning', 'Intrusion Detection']
+    }
   ];
 
   const certifications = [
