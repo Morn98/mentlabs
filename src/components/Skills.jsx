@@ -29,23 +29,53 @@ const Skills = () => {
 
   const certifications = [
     {
-      name: 'Certified Information Systems Security Professional (CISSP)',
-      issuer: 'ISC²',
-      year: '2023',
-      description: 'Advanced security certification covering security and risk management',
+      name: 'CompTIA Cybersecurity Analyset (CySA+)',
+      issuer: 'CompTIA ',
+      year: '2025',
+      description: 'Covers security operations, vulnerability management, incident response, and reporting. Includes malicious activity detection, vulnerability assessment, incident frameworks, SIEM tools, CVSS scoring, and threat intelligence.' 
     },
     {
-      name: 'AWS Certified Security - Specialty',
-      issuer: 'Amazon Web Services',
-      year: '2023',
-      description: 'Cloud security best practices and AWS security services',
+      name: 'Advanced Endpoint Investigations',
+      issuer: 'TryHackMe',
+      year: '2025',
+      description: 'Investigate endpoint threats across Windows, Linux, macOS, and mobile platforms using memory, disk, and file system forensics. Analyze live memory and cold disk images through hands-on labs covering multiple file systems.'  
+    }, 
+    {
+      name: 'SOC Level 2', 
+      issuer: 'TryHackMe', 
+      year: '2025', 
+      description: 'The course covers security operations, introductory incident response, malware analysis, and threat hunting and threat emulation.'
     },
     {
-      name: 'Certified Secure Software Lifecycle Professional (CSSLP)',
-      issuer: 'ISC²',
-      year: '2022',
-      description: 'Secure software development lifecycle practices',
+      name: 'CompTIA Pentest+',
+      issuer: 'TryHackMe',
+      year: '2021',
+      description: 'Includes hands-on exercises aligned to PenTest+ exam objectives and provides practical exam preparation to help with Performance Based Questions.'
+    }, 
+    {
+      name: 'Offensive Pentesting', 
+      issuer: 'TryHackMe', 
+      year: '2021',
+      description: 'Utilizes industry standard tools and provides training in offensive security through realistic attack scenarios. Includes supporting exercises and resources.'
     },
+    {
+      name: 'Jr Penetration Tester',
+      issuer: 'TryHackMe',
+      year: '2021',
+      description: 'Covers pentesting methodologies and tactics including enumeration, exploitation, and reporting. Provides realistic hands-on hacking exercises and instruction on industry security tools.'
+    }, 
+    {
+      name: 'Web Fundamentals',
+      issuer: 'TryHackMe',
+      year: '2021', 
+      description: 'Covers web fundamentals, major vulnerabilities, and web application assessments. Includes instruction on industry-used tools and practical knowledge for conducting security evaluations.'
+    },
+    {
+      name: 'Pre Security', 
+      issuer: 'TryHackMe',
+      year: '2021',
+      description: 'Covers cybersecurity basics, networking fundamentals and weaknesses, and common web attacks. Includes instruction on using the Linux operating system.'
+    }
   ];
 
   return (
