@@ -3,37 +3,54 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      name: 'SecureAuth Platform',
-      period: '2024',
-      description:
-        'Multi-factor authentication system with biometric integration and advanced threat detection. Designed for enterprise-scale deployment with high availability.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes'],
-      highlights: ['99.9% uptime', 'Supports 100K+ concurrent users', 'SOC 2 compliant'],
+      name: 'TypeRush', 
+      period: '2025', 
+      description: 'A fast-paced typing contest web app with randomized texts, multiple time modes, and a local leaderboard.',
+      technologies: ['React', 'Vite'], 
+      highlights: ['Local only', 'Leaderboard', 'English / German support', 'Random Word API']
+    }, 
+    {
+      name: 'Youtube-2-AppleMusic', 
+      period: '2025', 
+      description: 'A Chrome extension for macOS that allows you to open YouTube videos directly in Apple Music with one click.', 
+      technologies: ['Javascript', 'Manifest v3'], 
+      highlights: ['Title cleanup', 'Apple Music', 'Youtube']
     },
     {
-      name: 'Vulnerability Scanner',
-      period: '2023',
-      description:
-        'Automated security scanning tool that integrates with CI/CD pipelines to detect vulnerabilities in application dependencies and code patterns.',
-      technologies: ['Python', 'Docker', 'Jenkins', 'GraphQL', 'PostgreSQL'],
-      highlights: ['Scans 500+ repos daily', 'Reduces security debt by 40%', 'OWASP Top 10 coverage'],
+      name: 'Work-Tracker',
+      period: '2025',
+      description: 'Work Tracker is a modern web app for tracking time spent on projects. It features a timer, manual entry, statistics visualization, and project organization. Data storage uses a dual-layer approach: localStorage for offline-first UX + Supabase for persistent storage and multi-device sync.',
+      technologies: ['React', 'Typescript', 'Tailwind', 'Supabase', 'Vercel'],
+      highlights: ['Multi-Device Sync', 'Authentication', 'Offline Support']
+    }, 
+    {
+      name: 'PoC Zero Trust in Container based Applications',
+      period: '2023 - 2024', 
+      description: 'Proof of Concept of my master thesis about Zero Trust in container based Microservice Applications.',
+      technologies: ['Java', 'Spring Boot', 'Docker'],
+      highlights: ['PKI', 'IAM', 'Client Posture']
     },
     {
-      name: 'DevSecOps Dashboard',
-      period: '2023',
-      description:
-        'Real-time monitoring dashboard for security metrics across development lifecycle. Provides insights into security posture and compliance status.',
-      technologies: ['React', 'TypeScript', 'Elasticsearch', 'Kibana', 'AWS'],
-      highlights: ['Real-time analytics', 'Custom alerting', 'Integration with 15+ tools'],
-    },
+      name: 'Encryptio',
+      period: '2023', 
+      description: 'Encrypt strings, decrypt files and determine encryption algorithm of encrypted files.',
+      technologies: ['Python'], 
+      highlight: ['Determine encryption algorithm']
+    }, 
     {
-      name: 'Secure Code Review Assistant',
-      period: '2022',
-      description:
-        'AI-powered tool that assists developers in identifying security issues during code review. Integrates with GitHub and GitLab.',
-      technologies: ['Python', 'Machine Learning', 'GitHub API', 'FastAPI'],
-      highlights: ['80% reduction in security issues', 'Trained on 10K+ code samples'],
-    },
+      name: 'Aktiv App',
+      period: '2021',
+      description: 'The app connects local organizations with their community: associations, public institutions, non-profits, and cultural providers can present themselves and their activities while actively engaging residents in shaping local community life. Following an initial testing phase, the customer assumes ownership and ongoing development of the platform.', 
+      technologies: ['Docker', 'NodeJS', 'Flutter', 'Nginx'], 
+      highlight: ['Productive App']
+    }, 
+    {
+      name: 'CarrierTracking',
+      period: '2021', 
+      description: 'Digital load carrier tracking solution using 3D modeling (Unity 3D), QR code positioning, and real-time synchronization between physical warehouse layouts and digital twins. Eliminates discrepancies between 2D planning and actual production floor configurations.', 
+      technologies: ['C#', 'Unity'],
+      highlight: ['Productive App']
+    }, 
   ];
 
   return (
