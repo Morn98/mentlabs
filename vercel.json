@@ -1,23 +1,14 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "mentlabs.de"
         }
       ],
-      "destination": "https://www.mentlabs.de/$1",
+      "destination": "https://www.mentlabs.de/:path*",
       "permanent": true
     }
   ],
