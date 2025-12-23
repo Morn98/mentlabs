@@ -45,7 +45,7 @@ const Experience = () => {
     {
       title: 'Master Thesis Student',
       company: 'ACTICO GmbH',
-      location: 'Dresden, Germany',
+      location: 'Immenstaad am Bodensee, Germany',
       period: 'Oct 2023 - Apr 2024',
       type: 'professional',
       responsibilities: [
@@ -55,7 +55,7 @@ const Experience = () => {
     {
       title: 'Software Development Working Student',
       company: 'ACTICO GmbH',
-      location: 'Dresden, Germany',
+      location: 'Immenstaad am Bodensee, Germany',
       period: 'Jun 2022 - Sep 2023',
       type: 'professional',
       responsibilities: [
@@ -69,7 +69,7 @@ const Experience = () => {
     {
       title: 'IT Security Analyst Internship',
       company: 'MOGWAI Labs GmbH',
-      location: 'Munich, Germany',
+      location: 'Ulm, Germany',
       period: 'May 2021 - Oct 2021',
       type: 'professional',
       responsibilities: [

@@ -7,7 +7,7 @@ const StructuredData = () => {
     "givenName": "Moritz",
     "familyName": "Nentwig",
     "url": "https://www.mentlabs.de",
-    "image": "https://www.mentlabs.de/assets/ment.jpeg",
+    "image": "https://www.mentlabs.de/assets/ment-D0OBNUEU.jpeg",
     "jobTitle": ["Software Developer", "Security Engineer"],
     "worksFor": {
       "@type": "Organization",
@@ -115,7 +115,7 @@ const StructuredData = () => {
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    "dateCreated": "2024-12-21",
+    "dateCreated": "2025-12-21",
     "dateModified": new Date().toISOString().split('T')[0],
     "mainEntity": {
       "@id": "https://www.mentlabs.de/#person"
@@ -127,7 +127,7 @@ const StructuredData = () => {
     "@type": "WebSite",
     "name": "Moritz Nentwig Portfolio",
     "url": "https://www.mentlabs.de",
-    "description": "Professional portfolio of Moritz Nentwig - Software Developer and Security Engineer specializing in Zero Trust architecture and secure development",
+    "description": "Professional portfolio of Moritz Nentwig - Software Developer and Security Engineer specializing in IT security and development",
     "author": {
       "@id": "https://www.mentlabs.de/#person"
     },
