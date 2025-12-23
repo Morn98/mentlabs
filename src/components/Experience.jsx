@@ -3,6 +3,15 @@ import './Experience.css';
 const Experience = () => {
   const experiences = [
     {
+      title: 'Software Engineer',
+      company: 'LEAPTER GmbH', 
+      period: 'Jan 2026 - now',
+      type: 'professional',
+      responsibilities: [
+        'Todo!'
+      ]
+    },
+    {
       title: 'Security Architecture Trainee',
       company: 'Liechtensteinische Landesbank AG',
       period: 'Sep 2025 - Dec 2025',
