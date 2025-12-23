@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.mentlabs.de/sitemap.xml
+
+# Security
+User-agent: *
+Disallow: /api/
+Disallow: /admin/

@@ -19,7 +19,7 @@ const Home = () => {
       <div className="container">
         <div className="home-content">
           <div className="profile-image-wrapper">
-            <img src={profileImage} alt="Profile" className="profile-image" />
+            <img src={profileImage} alt="Moritz Nentwig - Software Developer and Security Engineer" className="profile-image" />
           </div>
           <div className="home-text">
             <h1 className="home-title">
@@ -27,9 +27,11 @@ const Home = () => {
               Security Engineer
             </h1>
             <p className="home-description">
-              Specialized in secure software development, robust architecture design,
-              security engineering and incident response. Building reliable,
-              security-focused solutions that protect what matters most.
+              Based in Lindau am Bodensee, Germany, I specialize in software development and security engineering. 
+              With a Master's in Computer Science and hands-on experience at Leapter, Liechtensteinische Landesbank, 
+              ACTICO and MOGWAI Labs, I build production-grade applications and systems that balance functionality 
+              with defense-in-depth principles. 
+              Fluent in German and English.
             </p>
             <p className="home-quote">
               <em>"I like to build, test, and break stuff - curiosity drives the process. 🧑‍💻📚"</em>

@@ -4,43 +4,50 @@ const Experience = () => {
   const experiences = [
     {
       title: 'Software Engineer',
-      company: 'LEAPTER GmbH', 
-      period: 'Jan 2026 - now',
+      company: 'LEAPTER GmbH',
+      location: 'Germany',
+      period: 'Starting January 2026',
       type: 'professional',
       responsibilities: [
-        'Todo!'
+        'Position begins January 2026 - details to be updated'
       ]
     },
     {
       title: 'Security Architecture Trainee',
       company: 'Liechtensteinische Landesbank AG',
+      location: 'Vaduz, Liechtenstein',
       period: 'Sep 2025 - Dec 2025',
       type: 'professional',
       responsibilities: [
-        'Todo!'
+        'Security architecture design and documentation',
+        'Risk assessment',
+        'Security policy development and review',
+        'Architectural review of security controls'
       ],
     },
     {
       title: 'Network & Security Trainee',
       company: 'Liechtensteinische Landesbank AG',
+      location: 'Vaduz, Liechtenstein',
       period: 'Sep 2024 - Aug 2025',
       type: 'professional',
       responsibilities: [
-        'Analysis, handling and remediation of security incidents', 
-        'Development of a container security policy', 
-        'Implementation and automation of threat intelligence', 
-        'Automation of various standard processes using Ansible and Python', 
-        'Design and deployment of a new remote access client', 
-        'Contribution to a company-wide Zero Trust Network Access initiative', 
-        'Maintenance, standardization and further development of the firewall and proxy infrastructure', 
+        'Analysis, handling and remediation of security incidents',
+        'Development of a container security policy',
+        'Implementation and automation of threat intelligence',
+        'Automation of various standard processes using Ansible and Python',
+        'Design and deployment of a new remote access client',
+        'Contribution to a company-wide Zero Trust Network Access initiative',
+        'Maintenance, standardization and further development of the firewall and proxy infrastructure',
         'Participation in a "Young Talents" initiative to improve the online banking presence'
       ],
     },
     {
       title: 'Master Thesis Student',
       company: 'ACTICO GmbH',
+      location: 'Dresden, Germany',
       period: 'Oct 2023 - Apr 2024',
-      type: 'professional', 
+      type: 'professional',
       responsibilities: [
         'Creating a concept for a zero trust architecture in container-based microservice application'
       ]
@@ -48,33 +55,36 @@ const Experience = () => {
     {
       title: 'Software Development Working Student',
       company: 'ACTICO GmbH',
+      location: 'Dresden, Germany',
       period: 'Jun 2022 - Sep 2023',
       type: 'professional',
       responsibilities: [
-        'Independent implementation of features and bug fixes in Java and Angular', 
+        'Independent implementation of features and bug fixes in Java and Angular',
         'Designing databases structures and migrating existing data',
-        'Supporting the testing process, including executing performance tests and implementing automated tests', 
-        'Active participation in the agile Scrum process', 
+        'Supporting the testing process, including executing performance tests and implementing automated tests',
+        'Active participation in the agile Scrum process',
         'Creating user and developer documentation'
       ],
     },
     {
       title: 'IT Security Analyst Internship',
       company: 'MOGWAI Labs GmbH',
+      location: 'Munich, Germany',
       period: 'May 2021 - Oct 2021',
       type: 'professional',
       responsibilities: [
         'Vulnerability analysis of web applications',
         'Development of scripts and tools to exploit vulnerabilities (Java, Python, .NET)',
-        'OCR recognition', 
-        'Penetration testing', 
-        'Cloud software development', 
+        'OCR recognition',
+        'Penetration testing',
+        'Cloud software development',
         'Android app reversing'
       ],
     },
     {
       title: 'M.Sc. Computer Science',
       company: 'University of Applied Sciences Weingarten',
+      location: 'Weingarten, Germany',
       period: '2022 - 2024',
       type: 'education',
       responsibilities: [
@@ -86,6 +96,7 @@ const Experience = () => {
     {
       title: 'B.Sc. Computer Science',
       company: 'University of Applied Sciences Ulm',
+      location: 'Ulm, Germany',
       period: '2018 - 2022',
       type: 'education',
       responsibilities: [
@@ -142,7 +153,10 @@ const Experience = () => {
                   <h3 className="timeline-title">{exp.title}</h3>
                   <span className="timeline-period">{exp.period}</span>
                 </div>
-                <h4 className="timeline-company">{exp.company}</h4>
+                <h4 className="timeline-company">
+                  {exp.company}
+                  {exp.location && <span className="timeline-location"> • {exp.location}</span>}
+                </h4>
                 <ul className="timeline-responsibilities">
                   {exp.responsibilities.map((resp, respIndex) => (
                     <li key={respIndex}>{resp}</li>
