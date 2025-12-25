@@ -55,8 +55,10 @@ const StructuredData = () => {
       "TypeScript",
       "React",
       "Docker",
-      "Kubernetes",
+      "Microservices",
       "Security Engineering",
+      "Security Analysis",
+      "Cyber Security",
       "Enterprise Architecture"
     ],
     "knowsLanguage": [
