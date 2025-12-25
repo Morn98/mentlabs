@@ -11,6 +11,7 @@ const navItems = [
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,14 +40,31 @@ const Navigation = () => {
         top: elementPosition,
         behavior: 'smooth',
       });
+      setIsMobileMenuOpen(false);
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-brand">Moritz Nentwig</div>
-        <ul className="nav-menu">
+
+        <button
+          className="hamburger"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
             <li key={item.id} className="nav-item">
               <button
