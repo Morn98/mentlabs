@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import Skills from './components/Skills';
@@ -19,6 +20,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <Analytics />
     </div>
   );
 }
