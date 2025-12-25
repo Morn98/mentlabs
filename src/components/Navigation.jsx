@@ -54,7 +54,7 @@ const Navigation = () => {
         <div className="nav-brand">Moritz Nentwig</div>
 
         <button
-          className="hamburger"
+          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
           onClick={toggleMobileMenu}
           aria-label="Toggle navigation menu"
           aria-expanded={isMobileMenuOpen}
