@@ -27,10 +27,9 @@ const Home = () => {
               Security Engineer
             </h1>
             <p className="home-description">
-              Based in Lindau am Bodensee, Germany, I specialize in software development and security engineering. 
-              With a Master's in Computer Science and hands-on experience at Leapter, Liechtensteinische Landesbank, 
-              ACTICO and MOGWAI Labs, I build production-grade applications and systems that balance functionality 
-              with defense-in-depth principles. 
+              I'm a software and security engineer based in Lindau, Germany, building production-grade applications with security built in from day one. 
+              With a Master's in Computer Science and experience in fintech and product-driven teams, 
+              I support companies as a reliable engineer — from hands-on development to security-critical systems. 
               Fluent in German and English.
             </p>
             <p className="home-quote">
