@@ -19,10 +19,12 @@ const experiences = [
     period: 'Sep 2025 - Dec 2025',
     type: 'professional',
     responsibilities: [
-      'Security architecture design and documentation',
-      'Risk assessment',
-      'Security policy development and review',
-      'Architectural review of security controls'
+      'Developed security concepts, conducted portfolio assessments, and provided security consulting for projects',
+      'Developed and maintained CAM, ICT reference architecture, IT security strategy, and IT demand processes',
+      'Conducted analyses on SIEM, PAM, HSM, and encryption for internal policy creation',
+      'Created a Container Security Governance framework',
+      'Independently managed various IT demand requests',
+      'Participated in the LLB Young Talent Program'
     ],
   },
   {
