@@ -16,10 +16,8 @@ const Home = () => {
               Security Engineer
             </h1>
             <p className="home-description">
-              I'm a software and security engineer based in Lindau, Germany, building and operating production-grade applications with security built in from day one.
-              With a Master's in Computer Science and experience in fintech and banking,
-              I support companies as a reliable engineer — from hands-on development to security-critical systems.
-              Fluent in German and English.
+              Software and security engineer based in Lindau, Germany. I build and operate production-grade applications with security built in from day one.
+              Master's in Computer Science, experience in fintech and banking. Fluent in German and English.
             </p>
             <p className="home-quote">
               <em>"I like to build, test, and break stuff - curiosity drives the process. 🧑‍💻📚"</em>

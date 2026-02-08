@@ -17,7 +17,12 @@
   --color-primary-alpha-02: rgba(96, 165, 250, 0.2);
   --color-primary-alpha-03: rgba(96, 165, 250, 0.3);
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   line-height: 1.6;

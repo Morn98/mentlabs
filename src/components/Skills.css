@@ -20,8 +20,8 @@
 
 .skill-category:hover {
   border-color: var(--color-primary-alpha-03);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .category-title {
@@ -91,20 +91,14 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 2px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.certification-card:hover::before {
-  transform: scaleX(1);
 }
 
 .certification-card:hover {
   border-color: var(--color-primary-alpha-03);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .cert-icon {

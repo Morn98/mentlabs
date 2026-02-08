@@ -7,8 +7,7 @@ main {
 }
 
 .section {
-  min-height: 100vh;
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .container {
@@ -18,7 +17,7 @@ main {
 }
 
 .section-title {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: var(--color-text-primary);
   text-align: center;
@@ -34,7 +33,7 @@ main {
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
   border-radius: 2px;
 }
