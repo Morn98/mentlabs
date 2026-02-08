@@ -8,25 +8,25 @@ const contactMethods = [
     name: 'Email',
     value: 'm.nentwig98@web.de',
     href: 'mailto:m.nentwig98@web.de',
-    icon: <MdEmail size={24} />,
+    icon: <MdEmail size={24} aria-hidden="true" />,
   },
   {
     name: 'GitHub',
     value: 'github.com/Morn98',
     href: 'https://github.com/Morn98',
-    icon: <FaGithub size={24} />,
+    icon: <FaGithub size={24} aria-hidden="true" />,
   },
   {
     name: 'LinkedIn',
     value: 'linkedin.com/in/moritz-nentwig',
     href: 'https://linkedin.com/in/moritz-nentwig',
-    icon: <FaLinkedin size={24} />,
+    icon: <FaLinkedin size={24} aria-hidden="true" />,
   },
   {
     name: 'TryHackMe',
     value: 'tryhackme.com/p/Ment',
     href: 'https://tryhackme.com/p/Ment',
-    icon: <SiTryhackme size={24} />,
+    icon: <SiTryhackme size={24} aria-hidden="true" />,
   },
 ];
 
