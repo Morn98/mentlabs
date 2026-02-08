@@ -61,9 +61,9 @@ const Contact = () => {
           })}
         </div>
 
-        <div className="contact-footer">
+        <footer className="contact-footer">
           <p>Available for freelance opportunities and consulting</p>
-        </div>
+        </footer>
       </div>
     </section>
   );

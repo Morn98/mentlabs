@@ -7,6 +7,7 @@ const experiences = [
     company: 'LEAPTER GmbH',
     location: 'Germany',
     period: 'Starting January 2026',
+    startDate: '2026-01',
     type: 'professional',
     responsibilities: [
       'Position begins January 2026 - details to be updated'
@@ -17,6 +18,8 @@ const experiences = [
     company: 'Liechtensteinische Landesbank AG',
     location: 'Vaduz, Liechtenstein',
     period: 'Sep 2025 - Dec 2025',
+    startDate: '2025-09',
+    endDate: '2025-12',
     type: 'professional',
     responsibilities: [
       'Developed security concepts, conducted portfolio assessments, and provided security consulting for projects',
@@ -32,6 +35,8 @@ const experiences = [
     company: 'Liechtensteinische Landesbank AG',
     location: 'Vaduz, Liechtenstein',
     period: 'Sep 2024 - Aug 2025',
+    startDate: '2024-09',
+    endDate: '2025-08',
     type: 'professional',
     responsibilities: [
       'Analysis, handling and remediation of security incidents',
@@ -49,6 +54,8 @@ const experiences = [
     company: 'ACTICO GmbH',
     location: 'Immenstaad am Bodensee, Germany',
     period: 'Oct 2023 - Apr 2024',
+    startDate: '2023-10',
+    endDate: '2024-04',
     type: 'professional',
     responsibilities: [
       'Creating a concept for a zero trust architecture in container-based microservice application'
@@ -59,6 +66,8 @@ const experiences = [
     company: 'ACTICO GmbH',
     location: 'Immenstaad am Bodensee, Germany',
     period: 'Jun 2022 - Sep 2023',
+    startDate: '2022-06',
+    endDate: '2023-09',
     type: 'professional',
     responsibilities: [
       'Independent implementation of features and bug fixes in Java and Angular',
@@ -73,6 +82,8 @@ const experiences = [
     company: 'MOGWAI Labs GmbH',
     location: 'Ulm, Germany',
     period: 'May 2021 - Oct 2021',
+    startDate: '2021-05',
+    endDate: '2021-10',
     type: 'professional',
     responsibilities: [
       'Vulnerability analysis of web applications',
@@ -88,6 +99,8 @@ const experiences = [
     company: 'University of Applied Sciences Weingarten',
     location: 'Weingarten, Germany',
     period: '2022 - 2024',
+    startDate: '2022',
+    endDate: '2024',
     type: 'education',
     responsibilities: [
       'Specialization in IT Security',
@@ -100,6 +113,8 @@ const experiences = [
     company: 'University of Applied Sciences Ulm',
     location: 'Ulm, Germany',
     period: '2018 - 2022',
+    startDate: '2018',
+    endDate: '2022',
     type: 'education',
     responsibilities: [
       'Focus on IT Security and Business Administration',
@@ -130,7 +145,13 @@ const Experience = () => {
               <div className="timeline-content">
                 <div className="timeline-header">
                   <h3 className="timeline-title">{exp.title}</h3>
-                  <span className="timeline-period">{exp.period}</span>
+                  <span className="timeline-period">
+                    {exp.endDate ? (
+                      <><time dateTime={exp.startDate}>{exp.period.split(' - ')[0]}</time> - <time dateTime={exp.endDate}>{exp.period.split(' - ')[1]}</time></>
+                    ) : (
+                      <>Starting <time dateTime={exp.startDate}>{exp.period.replace('Starting ', '')}</time></>
+                    )}
+                  </span>
                 </div>
                 <h4 className="timeline-company">
                   {exp.company}

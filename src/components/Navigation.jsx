@@ -76,15 +76,17 @@ const Navigation = () => {
         <ul className={`nav-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           {navItems.map((item) => (
             <li key={item.id} className="nav-item">
-              <button
+              <a
+                href={`#${item.id}`}
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   scrollToSection(item.id);
                   setIsMobileMenuOpen(false);
                 }}
               >
                 {item.label}
-              </button>
+              </a>
             </li>
           ))}
         </ul>
