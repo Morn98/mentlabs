@@ -1,5 +1,5 @@
 .skills-section {
-  background-color: #1e293b;
+  background-color: var(--color-bg-light);
   padding: 6rem 0;
 }
 
@@ -11,26 +11,26 @@
 }
 
 .skill-category {
-  background-color: #0f172a;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background-color: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .skill-category:hover {
-  border-color: rgba(96, 165, 250, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary-alpha-03);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .category-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #60a5fa;
+  color: var(--color-primary);
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+  border-bottom: 2px solid var(--color-primary-alpha-02);
 }
 
 .skills-list {
@@ -40,7 +40,7 @@
 }
 
 .skill-item {
-  color: #cbd5e1;
+  color: var(--color-text-secondary);
   padding: 0.5rem 0;
   font-size: 0.95rem;
   display: flex;
@@ -49,7 +49,7 @@
 }
 
 .skill-bullet {
-  color: #60a5fa;
+  color: var(--color-primary);
   font-size: 1.1rem;
 }
 
@@ -60,7 +60,7 @@
 .subsection-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin-bottom: 2.5rem;
   text-align: center;
 }
@@ -72,8 +72,8 @@
 }
 
 .certification-card {
-  background-color: #0f172a;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background-color: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -91,38 +91,32 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #60a5fa, #3b82f6);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.certification-card:hover::before {
-  transform: scaleX(1);
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
 }
 
 .certification-card:hover {
-  border-color: rgba(96, 165, 250, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary-alpha-03);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .cert-icon {
   width: 48px;
   height: 48px;
-  background-color: rgba(96, 165, 250, 0.1);
+  background-color: var(--color-primary-alpha-01);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #60a5fa;
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
 .cert-name {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin-bottom: 0.75rem;
   line-height: 1.4;
 }
@@ -133,23 +127,23 @@
   align-items: center;
   margin-bottom: 0.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .cert-issuer {
-  color: #60a5fa;
+  color: var(--color-primary);
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 .cert-year {
-  color: #94a3b8;
+  color: var(--color-text-muted);
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 .cert-description {
-  color: #94a3b8;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
   line-height: 1.6;
   margin: 0;
@@ -160,12 +154,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #60a5fa;
+  color: var(--color-primary);
   font-size: 0.875rem;
   font-weight: 500;
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  border-top: 1px solid var(--color-border);
   transition: all 0.3s ease;
 }
 
@@ -174,7 +168,7 @@
 }
 
 .certification-card:hover .cert-link-indicator {
-  color: #3b82f6;
+  color: var(--color-primary-dark);
 }
 
 .certification-card:hover .cert-link-indicator svg {

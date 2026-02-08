@@ -91,7 +91,7 @@ const Projects = () => {
                 <div className="project-highlights">
                   {project.highlights.map((highlight, highlightIndex) => (
                     <div key={highlightIndex} className="highlight-item">
-                      <FiCheck size={16} />
+                      <FiCheck size={16} aria-hidden="true" />
                       <span>{highlight}</span>
                     </div>
                   ))}
@@ -108,7 +108,7 @@ const Projects = () => {
                       className="project-link"
                       aria-label="View source code on GitHub"
                     >
-                      <FaGithub size={20} />
+                      <FaGithub size={20} aria-hidden="true" />
                       <span>GitHub</span>
                     </a>
                   )}
@@ -120,7 +120,7 @@ const Projects = () => {
                       className="project-link project-link-primary"
                       aria-label="View live application"
                     >
-                      <FiExternalLink size={20} />
+                      <FiExternalLink size={20} aria-hidden="true" />
                       <span>Visit App</span>
                     </a>
                   )}

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-light) 100%);
   position: relative;
 }
 
@@ -38,18 +38,8 @@
   height: 280px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #60a5fa;
-  box-shadow:
-    0 0 30px rgba(96, 165, 250, 0.4),
-    0 10px 40px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 40px rgba(96, 165, 250, 0.6),
-    0 15px 50px rgba(0, 0, 0, 0.4);
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .home-text {
@@ -60,7 +50,7 @@
 .home-title {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin-bottom: 1.5rem;
   line-height: 1.2;
   letter-spacing: -1px;
@@ -68,7 +58,7 @@
 
 .home-description {
   font-size: 1.25rem;
-  color: #cbd5e1;
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.7;
   max-width: 600px;
@@ -76,13 +66,13 @@
 
 .home-quote {
   font-size: 1.1rem;
-  color: #94a3b8;
+  color: var(--color-text-muted);
   margin-bottom: 2.5rem;
   line-height: 1.6;
   max-width: 600px;
   font-style: italic;
   padding-left: 1rem;
-  border-left: 3px solid #60a5fa;
+  border-left: 3px solid var(--color-primary);
 }
 
 .home-cta {
@@ -104,24 +94,24 @@
 }
 
 .cta-button.primary {
-  background-color: #60a5fa;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
 }
 
 .cta-button.primary:hover {
-  background-color: #3b82f6;
+  background-color: var(--color-primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(96, 165, 250, 0.3);
+  box-shadow: 0 10px 20px var(--color-primary-alpha-03);
 }
 
 .cta-button.secondary {
   background-color: transparent;
-  color: #60a5fa;
-  border: 2px solid #60a5fa;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .cta-button.secondary:hover {
-  background-color: rgba(96, 165, 250, 0.1);
+  background-color: var(--color-primary-alpha-01);
   transform: translateY(-2px);
 }
 

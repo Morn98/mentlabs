@@ -38,6 +38,21 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMobileMenuOpen]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -45,7 +60,7 @@ const Navigation = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-brand">Moritz Nentwig</div>
+        <button className="nav-brand" onClick={() => scrollToSection('home')}>Moritz Nentwig</button>
 
         <button
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
