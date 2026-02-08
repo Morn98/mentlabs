@@ -119,9 +119,9 @@ const Experience = () => {
               <div className="timeline-marker">
                 <div className="timeline-icon">
                   {exp.type === 'professional' ? (
-                    <MdWork size={20} />
+                    <MdWork size={20} aria-hidden="true" />
                   ) : (
-                    <MdSchool size={20} />
+                    <MdSchool size={20} aria-hidden="true" />
                   )}
                 </div>
               </div>

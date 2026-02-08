@@ -114,7 +114,7 @@ const Skills = () => {
                 className="certification-card"
               >
                 <div className="cert-icon">
-                  <MdSchool size={24} />
+                  <MdSchool size={24} aria-hidden="true" />
                 </div>
                 <h4 className="cert-name">{cert.name}</h4>
                 <div className="cert-meta">
@@ -124,7 +124,7 @@ const Skills = () => {
                 <p className="cert-description">{cert.description}</p>
                 <div className="cert-link-indicator">
                   <span>View Certificate</span>
-                  <FiExternalLink size={16} />
+                  <FiExternalLink size={16} aria-hidden="true" />
                 </div>
               </a>
             ))}
