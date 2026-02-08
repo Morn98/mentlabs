@@ -23,18 +23,26 @@ const Home = () => {
               <em>"I like to build, test, and break stuff - curiosity drives the process. 🧑‍💻📚"</em>
             </p>
             <div className="home-cta">
-              <button
+              <a
+                href="#skills"
                 className="cta-button primary"
-                onClick={() => scrollToSection('skills')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('skills');
+                }}
               >
                 View Skills
-              </button>
-              <button
+              </a>
+              <a
+                href="#contact"
                 className="cta-button secondary"
-                onClick={() => scrollToSection('contact')}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
               >
                 Get in Touch
-              </button>
+              </a>
             </div>
           </div>
         </div>
