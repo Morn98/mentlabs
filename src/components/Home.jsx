@@ -1,19 +1,8 @@
 import './Home.css';
 import profileImage from '../../assets/ment.jpeg';
+import { scrollToSection } from '../utils/scroll';
 
 const Home = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.offsetTop - offset;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <section id="home" className="section home-section">
       <div className="container">
@@ -27,9 +16,9 @@ const Home = () => {
               Security Engineer
             </h1>
             <p className="home-description">
-              I'm a software and security engineer based in Lindau, Germany, building and operating production-grade applications with security built in from day one. 
-              With a Master's in Computer Science and experience in fintech and banking, 
-              I support companies as a reliable engineer — from hands-on development to security-critical systems. 
+              I'm a software and security engineer based in Lindau, Germany, building and operating production-grade applications with security built in from day one.
+              With a Master's in Computer Science and experience in fintech and banking,
+              I support companies as a reliable engineer — from hands-on development to security-critical systems.
               Fluent in German and English.
             </p>
             <p className="home-quote">

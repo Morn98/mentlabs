@@ -3,17 +3,6 @@
   padding: 6rem 0;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: #94a3b8;
-  font-size: 1.1rem;
-  margin-top: -1rem;
-  margin-bottom: 3rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .projects-timeline {
   max-width: 1000px;
   margin: 0 auto;
@@ -194,7 +183,4 @@
     flex-direction: column;
   }
 
-  .section-subtitle {
-    font-size: 1rem;
-  }
 }
