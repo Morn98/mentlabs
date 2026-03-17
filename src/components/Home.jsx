@@ -9,12 +9,12 @@ const Home = () => {
       <div className="container">
         <div className="home-content">
           <div className="profile-image-wrapper">
-            <img src="/ment.jpeg" alt="Moritz Nentwig - Software Developer and Security Engineer" className="profile-image" />
+            <img src="/ment.jpeg" alt="Moritz Nentwig - Software Developer and Security Engineer" className="profile-image" width="280" height="280" />
           </div>
           <div className="home-text">
             <h1 className="home-title">
-              Software Developer &<br />
-              Security Engineer
+              Moritz Nentwig<br />
+              <span>Software Developer & Security Engineer</span>
             </h1>
             <p className="home-description">
               Software and security engineer based in Lindau, Germany. I build and operate production-grade applications with security built in from day one.

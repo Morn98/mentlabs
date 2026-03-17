@@ -3,7 +3,8 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Privacy Policy — Moritz Nentwig',
   description: 'Privacy policy (Datenschutzerklärung) for mentlabs.de',
-  robots: 'noindex',
+  alternates: { canonical: 'https://www.mentlabs.de/privacy' },
+  robots: { index: false, follow: true },
 };
 
 export default function Privacy() {
