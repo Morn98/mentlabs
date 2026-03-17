@@ -134,17 +134,17 @@ const Experience = () => {
   return (
     <section id="experience" className="section experience-section">
       <div className="container">
-        <h2 className="section-title">Experience & Education</h2>
+        <h2 className="section-title reveal">Experience & Education</h2>
 
-        <div className="timeline">
+        <div className="timeline reveal">
           {experiences.map((exp, index) => (
             <div key={index} className={`timeline-item ${exp.type}`}>
               <div className="timeline-marker">
                 <div className="timeline-icon">
                   {exp.type === 'professional' ? (
-                    <MdWork size={20} aria-hidden="true" />
+                    <MdWork size={14} aria-hidden="true" />
                   ) : (
-                    <MdSchool size={20} aria-hidden="true" />
+                    <MdSchool size={14} aria-hidden="true" />
                   )}
                 </div>
               </div>
@@ -161,7 +161,7 @@ const Experience = () => {
                 </div>
                 <h4 className="timeline-company">
                   {exp.company}
-                  {exp.location && <span className="timeline-location"> • {exp.location}</span>}
+                  {exp.location && <span className="timeline-location"> · {exp.location}</span>}
                 </h4>
                 <ul className="timeline-responsibilities">
                   {exp.responsibilities.map((resp, respIndex) => (

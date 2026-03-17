@@ -10,25 +10,25 @@ const contactMethods = [
     name: 'Email',
     value: 'm.nentwig98@web.de',
     href: 'mailto:m.nentwig98@web.de',
-    icon: <MdEmail size={24} aria-hidden="true" />,
+    icon: <MdEmail size={20} aria-hidden="true" />,
   },
   {
     name: 'GitHub',
     value: 'github.com/Morn98',
     href: 'https://github.com/Morn98',
-    icon: <FaGithub size={24} aria-hidden="true" />,
+    icon: <FaGithub size={20} aria-hidden="true" />,
   },
   {
     name: 'LinkedIn',
     value: 'linkedin.com/in/moritz-nentwig',
     href: 'https://linkedin.com/in/moritz-nentwig',
-    icon: <FaLinkedin size={24} aria-hidden="true" />,
+    icon: <FaLinkedin size={20} aria-hidden="true" />,
   },
   {
     name: 'TryHackMe',
     value: 'tryhackme.com/p/Ment',
     href: 'https://tryhackme.com/p/Ment',
-    icon: <SiTryhackme size={24} aria-hidden="true" />,
+    icon: <SiTryhackme size={20} aria-hidden="true" />,
   },
 ];
 
@@ -36,35 +36,38 @@ const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container">
-        <h2 className="section-title">Get in Touch</h2>
-        <p className="section-subtitle">
-          Interested in collaboration or have questions? Feel free to reach out through any of the
-          channels below.
-        </p>
-
-        <div className="contact-grid">
-          {contactMethods.map((method, index) => {
-            const isMailto = method.href.startsWith('mailto:');
-            return (
-              <a
-                key={index}
-                href={method.href}
-                className="contact-card"
-                {...(!isMailto && {
-                  target: '_blank',
-                  rel: 'noopener noreferrer',
-                })}
-              >
-                <div className="contact-icon">{method.icon}</div>
-                <h3 className="contact-name">{method.name}</h3>
-                <p className="contact-value">{method.value}</p>
-              </a>
-            );
-          })}
+        <div className="contact-content reveal">
+          <div className="contact-message">
+            <h2 className="contact-heading">Connect</h2>
+            <p className="contact-description">
+              I'm always interested in challenging security problems and new collaborations. Whether it's consulting, freelance work, or just talking shop about Zero Trust architectures — drop me a line.
+            </p>
+          </div>
+          <div className="contact-links-col">
+            {contactMethods.map((method, index) => {
+              const isMailto = method.href.startsWith('mailto:');
+              return (
+                <a
+                  key={index}
+                  href={method.href}
+                  className="contact-link"
+                  {...(!isMailto && {
+                    target: '_blank',
+                    rel: 'noopener noreferrer',
+                  })}
+                >
+                  <span className="contact-icon">{method.icon}</span>
+                  <span className="contact-link-text">
+                    <span className="contact-name">{method.name}</span>
+                    <span className="contact-value">{method.value}</span>
+                  </span>
+                </a>
+              );
+            })}
+          </div>
         </div>
 
-        <footer className="contact-footer">
-          <p>Available for freelance opportunities and consulting</p>
+        <footer className="contact-footer reveal">
           <div className="legal-links">
             <a href="/impressum">Impressum</a>
             <span className="legal-separator">·</span>
