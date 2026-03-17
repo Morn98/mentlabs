@@ -1,3 +1,5 @@
+'use client';
+
 import './Skills.css';
 import { MdSchool } from 'react-icons/md';
 import { FiExternalLink } from 'react-icons/fi';

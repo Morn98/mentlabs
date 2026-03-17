@@ -1,3 +1,5 @@
+'use client';
+
 import './Experience.css';
 import { MdWork, MdSchool } from 'react-icons/md';
 
