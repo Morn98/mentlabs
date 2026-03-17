@@ -142,6 +142,39 @@ const websiteSchema = {
   "inLanguage": "en"
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://www.mentlabs.de/#organization",
+  "name": "mentlabs",
+  "url": "https://www.mentlabs.de",
+  "logo": "https://www.mentlabs.de/favicon-32x32.png",
+  "description": "Freelance software development and security engineering consultancy based in Lindau, Germany.",
+  "founder": {
+    "@id": "https://www.mentlabs.de/#person"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lindau am Bodensee",
+    "addressRegion": "Bavaria",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.5494,
+    "longitude": 9.6850
+  },
+  "email": "m.nentwig98@web.de",
+  "sameAs": [
+    "https://github.com/Morn98",
+    "https://www.linkedin.com/in/moritz-nentwig"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Germany"
+  }
+};
+
 const StructuredData = () => {
   return (
     <>
@@ -156,6 +189,10 @@ const StructuredData = () => {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
     </>
   );
