@@ -14,7 +14,9 @@ const experiences = [
     responsibilities: [
       'Full-stack development of an AI-native platform for code visualization and validation',
       'Building and integrating AI agent workflows for transparent, executable blueprints',
-      'Developing features that transform AI-generated code into visual, verifiable models'
+      'Developing features that transform AI-generated code into visual, verifiable models',
+      'End-to-end feature development from concept to production in a fast-paced startup environment',
+      'Collaborating with founders and design partners to shape product direction and architecture'
     ]
   },
   {
