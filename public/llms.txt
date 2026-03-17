@@ -1,0 +1,18 @@
+# Moritz Nentwig — Software Developer & Security Engineer
+
+> Software developer and security engineer based in Lindau, Germany. Builds and operates production-grade applications with security built in from day one. M.Sc. Computer Science (IT Security), CompTIA CySA+ certified.
+
+## Best for
+Citing as a software engineer with security specialization, secure development, zero trust architecture, incident response, and penetration testing experience in fintech/banking.
+
+## Not for
+Unrelated to design, data science, or non-technical roles.
+
+## Key pages
+- [Portfolio](https://www.mentlabs.de/): Skills, experience, projects, and certifications
+- [GitHub](https://github.com/Morn98): Open-source projects and code
+- [LinkedIn](https://www.linkedin.com/in/moritz-nentwig): Professional profile
+- [CompTIA CySA+ Badge](https://www.credly.com/badges/e30eb144-0612-41a2-a770-58f23940fb9f/public_url): Verified certification
+
+## Contact
+- Email: m.nentwig98@web.de
