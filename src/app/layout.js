@@ -32,12 +32,21 @@ export const metadata = {
       'Software engineer and security professional specializing in cyber security engineering, secure development, and incident response. Based in Lindau am Bodensee, Germany.',
     locale: 'en_US',
     siteName: 'Moritz Nentwig Portfolio',
+    images: [
+      {
+        url: 'https://www.mentlabs.de/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Moritz Nentwig - Software Developer & Security Engineer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Moritz Nentwig - Software Developer & Security Engineer',
     description:
       'Software engineer and security professional specializing in cyber security engineering. M.Sc. Computer Science (IT Security), CompTIA CySA+ certified.',
+    images: ['https://www.mentlabs.de/og-image.png'],
   },
   icons: {
     icon: [
