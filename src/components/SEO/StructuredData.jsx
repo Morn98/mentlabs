@@ -7,7 +7,9 @@ const personSchema = {
   "familyName": "Nentwig",
   "url": "https://www.mentlabs.de",
   "image": "https://www.mentlabs.de/ment.jpeg",
-  "jobTitle": ["Software Developer", "Security Engineer"],
+  "jobTitle": "Software Developer & Security Engineer",
+  "description": "Software developer and security engineer specializing in secure development, security architecture, and incident response. M.Sc. Computer Science (IT Security), CompTIA CySA+ certified.",
+  "email": "m.nentwig98@web.de",
   "worksFor": {
     "@type": "Organization",
     "name": "LEAPTER GmbH"
@@ -74,8 +76,9 @@ const personSchema = {
   ],
   "sameAs": [
     "https://github.com/Morn98",
-    "https://linkedin.com/in/moritz-nentwig",
-    "https://tryhackme.com/p/Ment"
+    "https://www.linkedin.com/in/moritz-nentwig",
+    "https://tryhackme.com/p/Ment",
+    "https://www.credly.com/users/moritz-nentwig"
   ],
   "hasCredential": [
     {
@@ -86,7 +89,7 @@ const personSchema = {
         "@type": "Organization",
         "name": "CompTIA"
       },
-      "dateCreated": "2025"
+      "dateCreated": "2025-01-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -97,7 +100,7 @@ const personSchema = {
         "@type": "EducationalOrganization",
         "name": "Hochschule Ravensburg-Weingarten"
       },
-      "dateCreated": "2024"
+      "dateCreated": "2024-01-01"
     },
     {
       "@type": "EducationalOccupationalCredential",
@@ -108,7 +111,7 @@ const personSchema = {
         "@type": "EducationalOrganization",
         "name": "Technische Hochschule Ulm"
       },
-      "dateCreated": "2022"
+      "dateCreated": "2022-01-01"
     }
   ]
 };
