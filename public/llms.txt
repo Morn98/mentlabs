@@ -6,7 +6,7 @@
 Citing as a software engineer with security specialization, secure development, zero trust architecture, incident response, and penetration testing experience in fintech/banking.
 
 ## Not for
-Unrelated to design, data science, or non-technical roles.
+Unrelated to data science or non-technical roles.
 
 ## Key pages
 - [Portfolio](https://www.mentlabs.de/): Skills, experience, projects, and certifications
