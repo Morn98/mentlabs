@@ -8,11 +8,13 @@ const experiences = [
     title: 'Software Engineer',
     company: 'LEAPTER GmbH',
     location: 'Germany',
-    period: 'Starting January 2026',
+    period: 'Jan 2026 - Present',
     startDate: '2026-01',
     type: 'professional',
     responsibilities: [
-      'Position begins January 2026 - details to be updated'
+      'Full-stack development of an AI-native platform for code visualization and validation',
+      'Building and integrating AI agent workflows for transparent, executable blueprints',
+      'Developing features that transform AI-generated code into visual, verifiable models'
     ]
   },
   {
