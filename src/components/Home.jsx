@@ -1,5 +1,6 @@
+'use client';
+
 import './Home.css';
-import profileImage from '../../assets/ment.jpeg';
 import { scrollToSection } from '../utils/scroll';
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
       <div className="container">
         <div className="home-content">
           <div className="profile-image-wrapper">
-            <img src={profileImage} alt="Moritz Nentwig - Software Developer and Security Engineer" className="profile-image" />
+            <img src="/ment.jpeg" alt="Moritz Nentwig - Software Developer and Security Engineer" className="profile-image" />
           </div>
           <div className="home-text">
             <h1 className="home-title">

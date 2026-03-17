@@ -4,37 +4,38 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a React-based Single Page Application (SPA) portfolio website built with Vite. The application showcases software development and security engineering expertise with a focus on clean, professional design and security-focused aesthetic.
+This is a React portfolio website built with Next.js (App Router) and static export. The application showcases software development and security engineering expertise with a focus on clean, professional design and security-focused aesthetic. All pages are pre-rendered to static HTML at build time for optimal SEO and AI crawler visibility.
 
 ## Development Commands
 
 ```bash
-# Start development server (runs on http://localhost:5173/)
+# Start development server (runs on http://localhost:3000/)
 npm run dev
 
-# Build for production (outputs to dist/ directory)
+# Build for production (outputs to out/ directory as static HTML)
 npm run build
 
 # Run ESLint
 npm run lint
 
-# Preview production build locally
-npm run preview
+# Start production server (for local testing)
+npm start
 ```
 
 ## Architecture
 
 ### Application Structure
 
-The application follows a component-based SPA architecture with smooth scrolling navigation:
+The application uses Next.js App Router with `output: 'export'` for static site generation:
 
-- **App.jsx**: Main application component that renders all sections in a single-page layout
-- **Navigation.jsx**: Fixed navigation bar with scroll-based active section detection
-- **Section Components**: Each major section (Home, Skills, Experience, Projects, Contact) is a self-contained component with its own CSS
+- **src/app/layout.js**: Root layout with metadata, fonts, global CSS, and analytics
+- **src/app/page.js**: Home page (Server Component) that composes all section components
+- **src/components/**: Client components for each section, each with `"use client"` directive
+- **src/components/SEO/StructuredData.jsx**: JSON-LD structured data for search engines
 
 ### Navigation System
 
-The app uses a scroll-based navigation system instead of React Router:
+The app uses a scroll-based navigation system (no routing):
 
 1. Each section has an `id` attribute matching the navigation item
 2. Navigation component uses `useEffect` to track scroll position and update active state
@@ -42,17 +43,18 @@ The app uses a scroll-based navigation system instead of React Router:
 4. Fixed offset (80px) compensates for the sticky navbar height
 
 To add a new section:
-1. Create component in `src/components/`
-2. Import and add to `App.jsx` main layout
+1. Create component in `src/components/` with `"use client"` directive
+2. Import and add to `src/app/page.js`
 3. Update `navItems` array in `Navigation.jsx` with matching `id`
 4. Ensure section has `id` attribute and `section` class
 
 ### Styling Approach
 
 - Each component has a co-located CSS file (e.g., `Home.jsx` → `Home.css`)
-- Global styles in `index.css` (CSS reset, scrollbar, base elements)
-- Shared section styles in `App.css` (`.section`, `.container`, `.section-title`)
-- Color scheme uses CSS custom properties defined inline (consider moving to `:root`)
+- Global styles in `src/index.css` (CSS reset, scrollbar, base elements)
+- Shared section styles in `src/App.css` (`.section`, `.container`, `.section-title`)
+- Google Fonts (Inter) loaded via `next/font/google` in layout.js
+- Color scheme uses CSS custom properties defined in `:root`
 
 **Color Palette**:
 - Primary: `#60a5fa` (blue-400)
@@ -64,14 +66,22 @@ To add a new section:
 ### Component Patterns
 
 All section components follow this pattern:
+- `"use client"` directive at the top (required for react-icons and browser APIs)
 - Import corresponding CSS file
 - Define data arrays/objects for content (skills, experiences, projects, etc.)
 - Return semantic HTML with proper section `id` and classes
 - Use consistent spacing and responsive design
 
+### SEO & Metadata
+
+- All meta tags (title, description, OG, Twitter, geo) are defined in `src/app/layout.js` via Next.js `metadata` export
+- Structured data (JSON-LD) is rendered by `src/components/SEO/StructuredData.jsx`
+- Static images served from `public/` (profile image, favicons)
+- `vercel.json` handles redirects (non-www → www) and security headers
+
 ## Content Customization
 
-All placeholder content is in the component files:
+All content is in the component files:
 
 - **Home.jsx**: Introduction text and CTA buttons
 - **Skills.jsx**: `skillCategories` and `certifications` arrays
@@ -89,6 +99,8 @@ All components include responsive styles in their CSS files.
 
 ## Deployment
 
-The built application is fully static and can be deployed to:
-- Vercel, Netlify, GitHub Pages, or any static hosting
-- Requires updating `vite.config.js` base path for subdirectory deployments (e.g., GitHub Pages)
+The site deploys to Vercel via Git integration (push to main → auto build → deploy):
+- `next build` produces static HTML in `out/` directory (`output: 'export'`)
+- Vercel auto-detects Next.js and uses the appropriate builder
+- `vercel.json` configures edge-level redirects and security headers
+- No server required — fully static CDN deployment

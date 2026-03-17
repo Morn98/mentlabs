@@ -1,3 +1,5 @@
+'use client';
+
 import './Contact.css';
 import { MdEmail } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';

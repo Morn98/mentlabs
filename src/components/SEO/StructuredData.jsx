@@ -1,5 +1,3 @@
-import profileImage from '../../../assets/ment.jpeg';
-
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -8,7 +6,7 @@ const personSchema = {
   "givenName": "Moritz",
   "familyName": "Nentwig",
   "url": "https://www.mentlabs.de",
-  "image": profileImage,
+  "image": "https://www.mentlabs.de/ment.jpeg",
   "jobTitle": ["Software Developer", "Security Engineer"],
   "worksFor": {
     "@type": "Organization",

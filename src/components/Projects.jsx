@@ -1,3 +1,5 @@
+'use client';
+
 import './Projects.css';
 import { FaGithub } from 'react-icons/fa';
 import { FiCheck, FiExternalLink } from 'react-icons/fi';

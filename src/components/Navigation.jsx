@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import './Navigation.css';
 import { scrollToSection } from '../utils/scroll';
