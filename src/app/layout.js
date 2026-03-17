@@ -75,6 +75,9 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://va.vercel-scripts.com" />
+      </head>
       <body className={inter.className}>
         {children}
         <noscript>

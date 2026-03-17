@@ -3,7 +3,8 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Impressum — Moritz Nentwig',
   description: 'Legal notice (Impressum) for mentlabs.de',
-  robots: 'noindex',
+  alternates: { canonical: 'https://www.mentlabs.de/impressum' },
+  robots: { index: false, follow: true },
 };
 
 export default function Impressum() {
