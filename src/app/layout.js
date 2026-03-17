@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import '../index.css';
 import '../App.css';
+import './legal.css';
 
 const inter = Inter({
   subsets: ['latin'],
