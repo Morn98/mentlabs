@@ -1,13 +1,12 @@
 'use client';
 
 import './Skills.css';
-import { MdSchool } from 'react-icons/md';
 import { FiExternalLink } from 'react-icons/fi';
 
 const skillCategories = [
   {
     title: 'Development',
-    skills: ['Java', 'Python', 'Typescript', 'SQL', 'Angular & React', 'Docker/Kubernetes & Microservices', 'CI/CD', 'Vibe Coding'],
+    skills: ['Java', 'Python', 'Typescript', 'SQL', 'React', 'Next.js', 'Angular', 'Docker/Kubernetes & Microservices', 'CI/CD', 'Git', 'AI Development', 'Vibe Coding'],
   },
   {
     title: 'Enterprise Architecture',
@@ -86,48 +85,41 @@ const Skills = () => {
   return (
     <section id="skills" className="section skills-section">
       <div className="container">
-        <h2 className="section-title">Skills & Expertise</h2>
+        <h2 className="section-title reveal">Skills & Expertise</h2>
 
-        <div className="skills-grid">
+        <div className="skills-categories reveal">
           {skillCategories.map((category, index) => (
             <div key={index} className="skill-category">
               <h3 className="category-title">{category.title}</h3>
-              <ul className="skills-list">
+              <div className="skill-tags">
                 {category.skills.map((skill, skillIndex) => (
-                  <li key={skillIndex} className="skill-item">
-                    <span className="skill-bullet">▸</span>
+                  <span key={skillIndex} className="skill-tag">
                     {skill}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="certifications-section">
+        <div className="certifications-section reveal">
           <h3 className="subsection-title">Certifications</h3>
-          <div className="certifications-grid">
+          <div className="certifications-list">
             {certifications.map((cert, index) => (
               <a
                 key={index}
                 href={cert.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="certification-card"
+                className="certification-row"
               >
-                <div className="cert-icon">
-                  <MdSchool size={24} aria-hidden="true" />
+                <div className="cert-info">
+                  <span className="cert-name">{cert.name}</span>
+                  <span className="cert-meta">
+                    {cert.issuer} · {cert.year}
+                  </span>
                 </div>
-                <h4 className="cert-name">{cert.name}</h4>
-                <div className="cert-meta">
-                  <span className="cert-issuer">{cert.issuer}</span>
-                  <span className="cert-year">{cert.year}</span>
-                </div>
-                <p className="cert-description">{cert.description}</p>
-                <div className="cert-link-indicator">
-                  <span>View Certificate</span>
-                  <FiExternalLink size={16} aria-hidden="true" />
-                </div>
+                <FiExternalLink size={14} className="cert-link-icon" aria-hidden="true" />
               </a>
             ))}
           </div>

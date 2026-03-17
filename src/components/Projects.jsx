@@ -67,12 +67,12 @@ const Projects = () => {
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
-        <h2 className="section-title">Side Projects</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title reveal">Side Projects</h2>
+        <p className="section-subtitle reveal">
           A selection of applications and security-focused tools built to solve real-world problems
         </p>
 
-        <div className="projects-timeline">
+        <div className="projects-timeline reveal">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
               <div className="project-header">

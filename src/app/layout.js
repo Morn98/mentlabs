@@ -1,13 +1,21 @@
-import { Inter } from 'next/font/google';
+import { Sora, DM_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import '../index.css';
 import '../App.css';
 import './legal.css';
 
-const inter = Inter({
+const sora = Sora({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
+  variable: '--font-heading',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-body',
 });
 
 export const metadata = {
@@ -74,11 +82,11 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sora.variable} ${dmSans.variable}`}>
       <head>
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
       </head>
-      <body className={inter.className}>
+      <body className={dmSans.className}>
         {children}
         <noscript>
           <div
