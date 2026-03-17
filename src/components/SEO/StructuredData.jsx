@@ -123,6 +123,10 @@ const profilePageSchema = {
   "dateModified": new Date().toISOString().split('T')[0],
   "mainEntity": {
     "@id": "https://www.mentlabs.de/#person"
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".home-title", ".home-description"]
   }
 };
 
