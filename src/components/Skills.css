@@ -21,6 +21,7 @@
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
 }
 
 .skill-tags {
@@ -36,13 +37,14 @@
   font-size: 0.8rem;
   font-weight: 500;
   border: 1px solid var(--color-border);
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
   line-height: 1.4;
 }
 
 .skill-tag:hover {
   border-color: var(--color-border-hover);
   color: var(--color-text-primary);
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 /* Certifications */

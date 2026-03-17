@@ -5,6 +5,30 @@
   justify-content: center;
   background-color: var(--color-bg-dark);
   position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid background */
+.home-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+}
+
+/* Radial glow behind content */
+.home-glow {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .home-content {
@@ -12,30 +36,31 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 5rem;
   max-width: 1100px;
-}
-
-.profile-image-wrapper {
-  flex-shrink: 0;
-}
-
-.profile-image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--color-border-hover);
-  transition: border-color 0.3s ease;
-}
-
-.profile-image:hover {
-  border-color: var(--color-primary);
 }
 
 .home-text {
   flex: 1;
   text-align: left;
+}
+
+.terminal-prefix {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.terminal-symbol {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.terminal-path {
+  color: var(--color-text-muted);
 }
 
 .home-title {
@@ -45,32 +70,40 @@
   margin-bottom: 0.5rem;
   line-height: 1.1;
   letter-spacing: -0.04em;
+  min-height: 1.2em;
+}
+
+.cursor {
+  color: var(--color-primary);
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.cursor.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .home-subtitle {
-  font-family: var(--font-heading), 'Sora', sans-serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 500;
   color: var(--color-primary);
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
+  min-height: 1.5em;
 }
 
 .home-description {
-  font-size: 1.05rem;
-  color: var(--color-text-muted);
-  margin-bottom: 1.25rem;
-  line-height: 1.7;
-  max-width: 540px;
-}
-
-.home-quote {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
   margin-bottom: 2.5rem;
-  line-height: 1.6;
-  max-width: 540px;
-  opacity: 0.7;
+  line-height: 1.7;
+  max-width: 520px;
 }
 
 .home-cta {
@@ -82,13 +115,13 @@
 
 .cta-button {
   padding: 0.75rem 1.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   border-radius: var(--radius);
   cursor: pointer;
   transition: all 0.2s ease;
   border: none;
-  font-family: inherit;
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
   letter-spacing: 0.01em;
 }
 
@@ -99,27 +132,54 @@
 
 .cta-button.primary:hover {
   background-color: var(--color-primary-dark);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
 }
 
 .cta-button.secondary {
   background-color: transparent;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   padding: 0.75rem 0;
+  border: none;
 }
 
 .cta-button.secondary:hover {
   color: var(--color-primary);
 }
 
+/* Profile image */
+.profile-image-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--color-border-hover);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  filter: grayscale(20%);
+}
+
+.profile-image:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+  filter: grayscale(0%);
+}
+
 @media (max-width: 768px) {
   .home-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     gap: 2.5rem;
   }
 
   .home-text {
     text-align: center;
+  }
+
+  .terminal-prefix {
+    justify-content: center;
   }
 
   .profile-image {
@@ -132,13 +192,15 @@
     margin-right: auto;
   }
 
-  .home-quote {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .home-cta {
     justify-content: center;
+  }
+
+  .home-glow {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
   }
 }
 

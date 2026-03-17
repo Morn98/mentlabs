@@ -15,11 +15,13 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 2rem;
-  transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--color-bg-card);
 }
 
 .project-card:hover {
   border-color: var(--color-border-hover);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .project-header {
@@ -32,7 +34,7 @@
 }
 
 .project-name {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--color-text-primary);
   margin: 0;
@@ -45,10 +47,11 @@
   color: var(--color-text-muted);
   font-size: 0.8rem;
   font-weight: 500;
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
 }
 
 .project-description {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
   line-height: 1.7;
   margin-bottom: 1.25rem;
@@ -62,12 +65,13 @@
 }
 
 .tech-tag {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   padding: 0.25rem 0.625rem;
   border-radius: var(--radius);
   font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid var(--color-border);
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
 }
 
 .project-highlights {
@@ -82,7 +86,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-size: 0.85rem;
 }
 
@@ -110,6 +114,7 @@
   font-size: 0.85rem;
   font-weight: 500;
   transition: color 0.2s ease;
+  font-family: var(--font-heading), 'JetBrains Mono', monospace;
 }
 
 .project-link:hover {

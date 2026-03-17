@@ -1,17 +1,17 @@
-import { Sora, DM_Sans } from 'next/font/google';
+import { JetBrains_Mono, Plus_Jakarta_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import '../index.css';
 import '../App.css';
 import './legal.css';
 
-const sora = Sora({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-heading',
 });
 
-const dmSans = DM_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
@@ -77,24 +77,24 @@ export const metadata = {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#60a5fa',
+  themeColor: '#00d4ff',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${sora.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${plusJakarta.variable}`}>
       <head>
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
       </head>
-      <body className={dmSans.className}>
+      <body className={plusJakarta.className}>
         {children}
         <noscript>
           <div
             style={{
               padding: '2rem',
               fontFamily: 'sans-serif',
-              color: '#cbd5e1',
-              background: '#0f172a',
+              color: '#e8e8e8',
+              background: '#0a0a0a',
               minHeight: '100vh',
             }}
           >
@@ -105,17 +105,17 @@ export default function RootLayout({ children }) {
               CompTIA CySA+ certified.
             </p>
             <p>
-              <a href="mailto:m.nentwig98@web.de" style={{ color: '#60a5fa' }}>
+              <a href="mailto:m.nentwig98@web.de" style={{ color: '#00d4ff' }}>
                 Email
               </a>{' '}
               |{' '}
-              <a href="https://github.com/Morn98" style={{ color: '#60a5fa' }}>
+              <a href="https://github.com/Morn98" style={{ color: '#00d4ff' }}>
                 GitHub
               </a>{' '}
               |{' '}
               <a
                 href="https://linkedin.com/in/moritz-nentwig"
-                style={{ color: '#60a5fa' }}
+                style={{ color: '#00d4ff' }}
               >
                 LinkedIn
               </a>
