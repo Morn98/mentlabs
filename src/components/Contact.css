@@ -79,6 +79,26 @@
   margin: 0;
 }
 
+.legal-links {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.legal-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: var(--color-primary);
+}
+
+.legal-separator {
+  margin: 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 768px) {
   .contact-section {
     padding: 4rem 0;

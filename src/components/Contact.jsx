@@ -65,6 +65,11 @@ const Contact = () => {
 
         <footer className="contact-footer">
           <p>Available for freelance opportunities and consulting</p>
+          <div className="legal-links">
+            <a href="/impressum">Impressum</a>
+            <span className="legal-separator">·</span>
+            <a href="/privacy">Privacy Policy</a>
+          </div>
         </footer>
       </div>
     </section>
