@@ -2,10 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import './Navigation.css';
-import { scrollToSection } from '../utils/scroll';
 
 const navItems = [
-  { id: 'home', label: 'Home' },
   { id: 'skills', label: 'Skills' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
@@ -13,7 +11,8 @@ const navItems = [
 ];
 
 const Navigation = () => {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -22,40 +21,22 @@ const Navigation = () => {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        const sections = navItems.map(item => document.getElementById(item.id));
-        const scrollPosition = window.scrollY + 100;
+        const { scrollY, innerHeight } = window;
+        // The last section may be too short to ever reach the top, so the page bottom selects it
+        const atBottom = scrollY + innerHeight >= document.documentElement.scrollHeight - 1;
+        const current = atBottom
+          ? navItems.at(-1)
+          : navItems.findLast(({ id }) => document.getElementById(id)?.offsetTop <= scrollY + innerHeight / 3);
 
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const section = sections[i];
-          if (section && section.offsetTop <= scrollPosition) {
-            setActiveSection(navItems[i].id);
-            break;
-          }
-        }
+        setActiveSection(current?.id ?? null);
+        setIsScrolled(scrollY > 0);
         ticking = false;
       });
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Scroll reveal observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -78,9 +59,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <button className="nav-brand" onClick={() => scrollToSection('home')}>Moritz Nentwig</button>
+        <a href="#home" className="nav-brand">Moritz Nentwig</a>
 
         <button
           className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
@@ -99,11 +80,8 @@ const Navigation = () => {
               <a
                 href={`#${item.id}`}
                 className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.id);
-                  setIsMobileMenuOpen(false);
-                }}
+                aria-current={activeSection === item.id ? 'true' : undefined}
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </a>
