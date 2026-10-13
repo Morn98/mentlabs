@@ -38,9 +38,10 @@ The application uses Next.js App Router with `output: 'export'` for static site 
 The app uses a scroll-based navigation system (no routing):
 
 1. Each section has an `id` attribute matching the navigation item
-2. Navigation component uses `useEffect` to track scroll position and update active state
-3. Click handlers use `window.scrollTo()` with smooth scrolling behavior
-4. Fixed offset (80px) compensates for the sticky navbar height
+2. Links are plain `href="#id"` anchors; `html { scroll-behavior: smooth }` animates them (off under reduced motion)
+3. `.section { scroll-margin-top: var(--nav-height) }` keeps sections clear of the fixed navbar (72px, 60px on mobile)
+4. Navigation tracks scroll position to set the active item; the page bottom always selects the last item
+5. `ScrollReveal.jsx` fades in `.reveal` elements on first view
 
 To add a new section:
 1. Create component in `src/components/` with `"use client"` directive
@@ -57,11 +58,9 @@ To add a new section:
 - Color scheme uses CSS custom properties defined in `:root`
 
 **Color Palette**:
-- Primary: `#60a5fa` (blue-400)
-- Secondary: `#3b82f6` (blue-500)
-- Dark background: `#0f172a` (slate-900)
-- Light background: `#1e293b` (slate-800)
-- Text: `#cbd5e1`, `#94a3b8`, `#ffffff`
+- Primary: `#00d4ff` (cyan), secondary `#d4a574`
+- Backgrounds: `#0a0a0a` (dark), `#111111` (light), `#161616` (card)
+- Text: `#e8e8e8`, `#a0a0a0`, `#888888` (muted; keep ≥ 4.5:1 contrast on the backgrounds)
 
 ### Component Patterns
 

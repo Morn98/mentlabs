@@ -3,12 +3,13 @@
 }
 
 main {
-  padding-top: 72px;
+  padding-top: var(--nav-height);
 }
 
 .section {
   padding: 6rem 0;
   position: relative;
+  scroll-margin-top: var(--nav-height);
 }
 
 .container {

@@ -13,7 +13,7 @@
   --color-bg-card: #161616;
   --color-text-primary: #e8e8e8;
   --color-text-secondary: #a0a0a0;
-  --color-text-muted: #666666;
+  --color-text-muted: #888888;
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-hover: rgba(255, 255, 255, 0.12);
   --color-primary-alpha-01: rgba(0, 212, 255, 0.05);
@@ -21,6 +21,7 @@
   --color-primary-alpha-03: rgba(0, 212, 255, 0.2);
 
   --radius: 6px;
+  --nav-height: 72px;
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
 
@@ -36,6 +37,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 60px;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-secondary: #c8c8c8;
+    --color-text-muted: #a8a8a8;
+    --color-border: rgba(255, 255, 255, 0.24);
+    --color-border-hover: rgba(255, 255, 255, 0.4);
+  }
 }
 
 body {
@@ -67,6 +83,18 @@ button {
   border: none;
   cursor: pointer;
   font-family: inherit;
+}
+
+/* Press feedback lands on pointer-down (touch has no hover) */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active,
+button:active {
+  opacity: 0.7;
+  transition: opacity 0s;
 }
 
 button:focus,
@@ -156,8 +184,10 @@ p {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
     scroll-behavior: auto !important;
   }
 

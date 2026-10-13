@@ -44,21 +44,27 @@
   color: var(--color-text-secondary);
   padding: 1rem 0;
   border-bottom: 1px solid var(--color-border);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .contact-link:first-child {
   border-top: 1px solid var(--color-border);
 }
 
-.contact-link:hover {
-  padding-left: 0.5rem;
-  color: var(--color-text-primary);
-}
+@media (hover: hover) {
+  .contact-link:hover {
+    color: var(--color-text-primary);
+  }
 
-.contact-link:hover .contact-icon {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  .contact-link:hover .contact-icon,
+  .contact-link:hover .contact-link-text {
+    transform: translateX(0.5rem);
+  }
+
+  .contact-link:hover .contact-icon {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
 }
 
 .contact-icon {
@@ -70,7 +76,7 @@
   border: 1px solid var(--color-border);
   border-radius: 50%;
   color: var(--color-text-muted);
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
   flex-shrink: 0;
 }
 
@@ -79,6 +85,7 @@
   flex-direction: column;
   gap: 0.125rem;
   min-width: 0;
+  transition: transform 0.2s ease;
 }
 
 .contact-name {
@@ -114,8 +121,10 @@
   transition: color 0.2s ease;
 }
 
-.legal-links a:hover {
-  color: var(--color-primary);
+@media (hover: hover) {
+  .legal-links a:hover {
+    color: var(--color-primary);
+  }
 }
 
 .legal-separator {
